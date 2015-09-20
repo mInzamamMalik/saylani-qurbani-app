@@ -1,0 +1,68 @@
+<ion-view view-title="qurbani Service">
+  <ion-content>
+
+
+
+
+    <div ng-show="question1">
+
+      <br />
+      <h4 class="positive" align="center">Please Choose One Packege</h4>
+
+      <div class="row">
+        <div class="col col-25 col-offset-25" ng-click="question1done('cow')">
+          <img src="img/untitled1.jpg"  alt=""/>
+          <span class="positive">Cow</span>
+        </div>
+
+      <div class="col col-25" ng-click="question1done('goat')">
+        <img src="img/untitled1.jpg"  alt=""/>
+        <span class="positive">Goat</span>
+      </div>
+
+      </div>
+    </div>
+
+
+    <div ng-show="question2">
+
+      <br />
+      <h4 class="positive" align="center">Provide Basic Info</h4>
+      <h5 class="positive" align="center">for <span ng-bind="user.cowGoat" class="calm"></span> Qurbani</h5>
+
+    <form ng-submit="question2done();">
+
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">First Name</span>
+          <input type="text" placeholder="First Name" ng-model="user.fname">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Last Name</span>
+          <input type="text" placeholder="Last Name" ng-model="user.lname">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Email</span>
+          <input type="text" placeholder="Email" ng-model="user.email">
+        </label>
+
+        <li class="item item-checkbox assertive">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="user.allowGetGeoLocation">
+          </label>
+          Allow get location from geo location
+        </li>
+
+        <button class="item button button-positive button-full">Next</button>
+
+      </div>
+
+    </form>
+    </div>
+
+
+
+
+
+  </ion-content>
+</ion-view>
